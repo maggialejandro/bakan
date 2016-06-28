@@ -1,7 +1,7 @@
 {
   "name": "bakan",
   "version": "1.0.0",
-  "private": true,
+  "author": "maggialejandro",
   "description": "Javascript Marquee / Ticker implementation",
   "main": "dist/index.js",
   "scripts": {
@@ -9,6 +9,23 @@
     "start": "set NODE_ENV=development&& webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000",
     "build": "set NODE_ENV=production&& webpack --progress --colors"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:maggialejandro/bakan.git"
+  },
+  "homepage": "https://github.com/maggialejandro/bakan",
+  "bugs": {
+    "url": "https://github.com/maggialejandro/bakan/issues"
+  },
+  "keywords": [
+    "marquee",
+    "ticker",
+    "module",
+    "model",
+    "es6",
+    "es5",
+    "babel"
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.5.2",

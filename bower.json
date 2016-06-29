@@ -1,0 +1,26 @@
+{
+  "name": "bakan",
+  "description": "Javascript Marquee / Ticker implementation",
+  "main": "dist/index.js",
+  "authors": [
+    "maggialejandro"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "marquee",
+    "ticker",
+    "module",
+    "model",
+    "es6",
+    "es5",
+    "babel"
+  ],
+  "homepage": "https://github.com/maggialejandro/bakan",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -19,7 +19,6 @@ class Text {
   constructor(options) {
     this.options = options
     this.options.src = options.text + new Array(options.space + 1).join(' ')
-    this.playing = true
     this.hasTriggeredNext = false;
     this.delta = null
     this.el = document.createElement('div')
@@ -44,22 +43,20 @@ class Text {
     this.el.style.overflow = 'hidden'
 
     var nextStep = () => {
-      if(this.playing){
-        if(this.delta + textLength < 0){
-          onFinish()
-        }else{
-          if(this.delta + textLength < this.options.width) {
-            if(!this.hasTriggeredNext){
-              setTimeout(onNext, this.options.period);
-              this.hasTriggeredNext = true
-            }
+      if(this.delta + textLength < 0){
+        onFinish()
+      }else{
+        if(this.delta + textLength < this.options.width) {
+          if(!this.hasTriggeredNext){
+            setTimeout(onNext, this.options.period);
+            this.hasTriggeredNext = true
           }
-
-          this.delta -= this.options.step
-          this.el.style.left = this.delta + 'px'
-
-          setTimeout(nextStep, this.options.period);
         }
+
+        this.delta -= this.options.step
+        this.el.style.left = this.delta + 'px'
+
+        setTimeout(nextStep, this.options.period);
       }
     }
 

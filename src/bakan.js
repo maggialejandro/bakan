@@ -34,7 +34,8 @@ class Text {
     this.delta = this.options.width
 
     this.el.style.font = font
-    this.el.style.fontSize = this.options.height + 'px'
+    this.el.style.fontSize = parseInt(this.options.height * 0.9) + 'px'
+    this.el.style.lineHeight = parseInt(this.options.height) + 'px'
     this.el.style.color = this.options.color
     this.el.style.left = this.delta + 'px'
     this.el.style.position = 'absolute'

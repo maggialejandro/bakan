@@ -1,6 +1,6 @@
 {
   "name": "bakan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "maggialejandro",
   "description": "Javascript Marquee / Ticker implementation",
   "main": "dist/index.js",

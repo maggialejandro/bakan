@@ -1,8 +1,7 @@
-
 import Bakan from './bakan'
 
-var $dom = document.getElementById('root')
-var options = {
+const $dom = document.getElementById('root')
+const options = {
   text: 'Lorem ipsum dolor sit amet',
   step: 1,
   period: 10,

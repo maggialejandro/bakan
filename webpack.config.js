@@ -19,7 +19,7 @@ var plugins = [
   })
 ]
 
-if(PRODUCTION){
+if (PRODUCTION) {
   plugins.push(new webpack.optimize.UglifyJsPlugin({
     compress: { warnings: false }
   }))
@@ -27,7 +27,7 @@ if(PRODUCTION){
   output.libraryTarget = 'umd'
 
   delete entry.html
-}else{
+} else {
   plugins.push(new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'))
 }
 

@@ -29,10 +29,10 @@
 
 ### text
 
-**Type:** _String_
+**Type:** _String_ or _Array_
 
 ``` js
-text: 'Lorem ipsum dolor sit amet'
+text: ['Lorem ipsum dolor sit amet', 'Quasi quis, facilis culpa omnis']
 ```
 
 Text shown by Bakan marquee
@@ -99,7 +99,7 @@ Background color
 
 ### opacity
 
-**Type:** _Integer_
+**Type:** _Integer_ 
 **Values:** `[ 0, 100 ]`
 
 ``` js

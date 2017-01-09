@@ -85,17 +85,27 @@ class Container {
   }
 
   play() {
-    // TODO: multiple texts
-    const text = {
-      text: this.options.text,
-      space: this.options.space || 1,
-      period: this.options.period || 10,
-      color: this.options.color,
-      font: this.options.font,
-      step: this.options.step || 1
+    const addText = (t) => {
+      const text = {
+        text: t,
+        space: this.options.space || 1,
+        period: this.options.period || 10,
+        color: this.options.color,
+        font: this.options.font,
+        step: this.options.step || 1
+      }
+
+      this.texts.push(text)
     }
 
-    this.texts.push(text)
+    if (Array.isArray(this.options.text)) {
+      this.options.text.forEach((t) => {
+        addText(t)
+      })
+    } else {
+      addText(this.options.text)
+    }
+
     this.add()
   }
 
